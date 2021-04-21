@@ -1,6 +1,6 @@
 # EEG-letters
 
-The idea of this article is to do a quick and easy build of a Docker container with a simple machine learning model and run it. In order to start building a Docker container for a machine learning model, let’s consider three files: 
+The idea is to do a quick and easy build of a Docker container with a simple machine learning model and run it. In order to start building a Docker container for a machine learning model, let’s consider three files: 
 -	Dockerfile
 -	train.py
 -	inference.py
