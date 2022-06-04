@@ -10,3 +10,4 @@ The train.py is  a python script that ingest and normalize EEG data in a csv fil
 The inference.py will be called to perform batch inference by loading the two models that has been previously created. The application will normalize new EEG data coming from a csv file (test.csv), perform inference on the dataset and print the classification accuracy and predictions. 
 
 Read the complete post:  https://xaviervasques.medium.com/build-and-run-a-docker-container-for-your-machine-learning-model-60209c2d7a7f
+# remodeling
