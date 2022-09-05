@@ -20,7 +20,7 @@ from sklearn import preprocessing
 
 def inference():
 
-    MODEL_DIR = os.environ["MODEL_DIR"]
+    MODEL_DIR = os.environ["MY_MODEL"]
     MODEL_FILE_LDA = os.environ["MODEL_FILE_LDA"]
     MODEL_FILE_NN = os.environ["MODEL_FILE_NN"]
     MODEL_PATH_LDA = os.path.join(MODEL_DIR, MODEL_FILE_LDA)
