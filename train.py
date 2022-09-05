@@ -47,7 +47,7 @@ def train():
     
     # Save model
     from joblib import dump
-    dump(clf_lda, MODEL_PATH_LDA)
+    dump(clf_lda, "Inference_lda.joblib")
         
     # Neural Networks multi-layer perceptron (MLP) algorithm
     clf_NN = MLPClassifier(solver='adam', activation='relu', alpha=0.0001, hidden_layer_sizes=(500,), random_state=0, max_iter=1000)
@@ -55,7 +55,7 @@ def train():
        
     # Secord model
     from joblib import dump, load
-    dump(clf_NN, MODEL_PATH_NN)
+    dump(clf_NN, "Inference_NN.joblib")
         
 if __name__ == '__main__':
     train()

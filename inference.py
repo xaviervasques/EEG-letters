@@ -43,14 +43,14 @@ def inference():
     # Models training
     
     # Run model
-    print(MODEL_PATH_LDA)
-    clf_lda = load(MODEL_PATH_LDA)
+    # print(MODEL_PATH_LDA)
+    clf_lda = load("Inference_lda.joblib")
     print("LDA score and classification:")
     print(clf_lda.score(X_test, y_test))
     print(clf_lda.predict(X_test))
         
     # Run model
-    clf_nn = load(MODEL_PATH_NN)
+    clf_nn = load("Inference_NN.joblib")
     print("NN score and classification:")
     print(clf_nn.score(X_test, y_test))
     print(clf_nn.predict(X_test))
