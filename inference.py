@@ -20,16 +20,11 @@ from sklearn import preprocessing
 
 def inference():
 
-    # MODEL_DIR = os.environ["MODEL_DIR"]
-    # MODEL_FILE_LDA = os.environ["MODEL_FILE_LDA"]
-    # MODEL_FILE_NN = os.environ["MODEL_FILE_NN"]
-    # MODEL_PATH_LDA = os.path.join(MODEL_DIR, MODEL_FILE_LDA)
-    # MODEL_PATH_NN = os.path.join(MODEL_DIR, MODEL_FILE_NN)
-
-    dirpath = os.getcwd()
-    print(f'dirpath = {dirpath}')''
-
-    output_path = os.path.join(dirpath, 'output.csv')
+    MODEL_DIR = os.environ["MODEL_DIR"]
+    MODEL_FILE_LDA = os.environ["MODEL_FILE_LDA"]
+    MODEL_FILE_NN = os.environ["MODEL_FILE_NN"]
+    MODEL_PATH_LDA = os.path.join(MODEL_DIR, MODEL_FILE_LDA)
+    MODEL_PATH_NN = os.path.join(MODEL_DIR, MODEL_FILE_NN)
 
     # Load, read and normalize training data
     testing = "test.csv"
@@ -48,19 +43,19 @@ def inference():
     # Models training
     
     # Run model
-    # print(MODEL_PATH_LDA)
-    clf_lda = load("Inference_lda.joblib")
+    print(MODEL_PATH_NN)
+    clf_lda = load(MODEL_PATH_LDA)
     print("LDA score and classification:")
     print(clf_lda.score(X_test, y_test))
     print(clf_lda.predict(X_test))
         
     # Run model
-    clf_nn = load("Inference_NN.joblib")
+    print(MODEL_PATH_NN)
+    clf_nn = load(MODEL_PATH_NN)
     print("NN score and classification:")
     print(clf_nn.score(X_test, y_test))
     print(clf_nn.predict(X_test))
-    
-    pd.DataFrame(X_test).to_csv(output_path)
+
 
 if __name__ == '__main__':
     inference()

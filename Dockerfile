@@ -1,6 +1,10 @@
 FROM jupyter/scipy-notebook
 
-WORKDIR /mydata
+RUN mkdir my-model
+
+ENV MY_MODEL=/home/jovyan/my-model
+ENV MODEL_FILE_LDA=clf_lda.joblib
+ENV MODEL_FILE_NN=clf_nn.joblib
 
 RUN pip install joblib
 
